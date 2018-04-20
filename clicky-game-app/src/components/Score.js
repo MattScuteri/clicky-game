@@ -4,12 +4,12 @@ import AppBar from 'material-ui/AppBar';
 class Score extends Component {
 	render() {
 
-		const scoreBar = () => (
+		const ScoreBar = () => (
 			<AppBar title='Score' />
 
 		)
 		return (
-			<scoreBar />
+			<ScoreBar />
 		)
 	}
 }
