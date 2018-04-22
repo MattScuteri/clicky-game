@@ -8,7 +8,7 @@ class App extends Component {
   state = {
     emojis: emojis,
     currentScore: 0,
-    topScore: 0,
+    topScore: 0
   };
 
   Shuffle = array => {
@@ -47,13 +47,16 @@ class App extends Component {
     return (
       <div className="App">
           <Header />
-          <Score />
+          <Score 
+            currentScore={this.state.currentScore}
+            topScore={this.state.topScore}
+          />
           {this.state.emojis.map(emoji => (
             <DisplayImage 
               updateState={this.updateState}
               id={emoji.id}
               key={emoji.id}
-              image={emoji.image}
+              image={require(`${emoji.image}`)}
               clicked={emoji.clicked}
             />
           ))}
