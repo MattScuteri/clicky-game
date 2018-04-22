@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './GameBoard.css';
 
-const displayImage = (props) => {
-	return (
-		<div
-			className='image-card'
-			key={props.id}
-			id={props.id}
-			style={{backgroundImage: `url(./assets/${props.image}')`}}
-		/>
-	)
-}
+const DisplayImage = (props) => (
+  <div className="image">
+    <div className="img-container">
+      	<img className="emoji" onClick={() => props.updateState(props.id)} alt='alt' src={`${props.image}`} />
+    </div>
+  </div>
+);
 
-export default displayImage;
+export default DisplayImage;
